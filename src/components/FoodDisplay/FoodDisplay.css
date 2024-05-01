@@ -15,3 +15,28 @@
     gap: 30px;
     row-gap: 50px;
 }
+
+
+.pagination {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .pagination button {
+    margin: 0 5px;
+    padding: 5px 10px;
+    background-color: orangered;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .pagination button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+  }
+  
+  .pagination button:hover {
+    background-color: #000000;
+  }
