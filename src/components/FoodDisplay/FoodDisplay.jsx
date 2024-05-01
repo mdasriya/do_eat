@@ -2,19 +2,20 @@ import React, { useContext, useState } from "react";
 import "./FoodDisplay.css";
 import FoodItem from "../FoodItem/FoodItem";
 import { StoreContext } from "../../context/StoreContext";
+import { Link, useNavigate } from "react-router-dom";
 
 const FoodDisplay = ({ category }) => {
   const { food_list } = useContext(StoreContext);
   const [currentPage, setCurrentPage] = useState(1);
-  const [productsPerPage] = useState(10);
-
+  const [productsPerPage] = useState(5);
+const navigate = useNavigate()
   // Logic for displaying products
   const indexOfLastProduct = currentPage * productsPerPage;
   const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
   const currentProducts = food_list.slice(indexOfFirstProduct, indexOfLastProduct);
 
   // Change page
-  const paginate = (pageNumber) => setCurrentPage(pageNumber);
+  // const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   return (
     <div className="food-display" id="food-display">
@@ -35,22 +36,9 @@ const FoodDisplay = ({ category }) => {
           }
           return null;
         })}
+     <Link to={"/dishes"}><span className="explore_more" onClick={navigate("/dishes")}>View More...</span></Link>   
       </div>
-      {/* Pagination */}
-      <div className="pagination">
-        <button
-          onClick={() => paginate(currentPage > 1 ? currentPage - 1 : 1)}
-          disabled={currentPage === 1}
-        >
-          Previous
-        </button>
-        <button
-          onClick={() => paginate(currentPage < Math.ceil(food_list.length / productsPerPage) ? currentPage + 1 : currentPage)}
-          disabled={currentPage === Math.ceil(food_list.length / productsPerPage)}
-        >
-          Next
-        </button>
-      </div>
+    
     </div>
   );
 };

@@ -9,11 +9,14 @@ const FoodItem = ({ id, name, price, description, image }) => {
   const handleAddToCart = (e) => {
     e.preventDefault(); // Prevent default behavior
     addToCart(id);
+    // alert("dish added in cart")
+    
   };
 
   const handleRemoveFromCart = (e) => {
     e.preventDefault(); // Prevent default behavior
     removeFromCart(id);
+    // alert("dish remove in cart")
   };
 
   return (
