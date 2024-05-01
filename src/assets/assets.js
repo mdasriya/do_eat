@@ -123,7 +123,8 @@ export const food_list = [
         image: food_1,
         price: 260,
         description: "A Greek based salad with wholesome, nutritious ingredients like cherry tomatoes, colourful bell peppers, diced cucumber with additional veggies and dressed with kasundi vinaigrette",
-        category: "Salad"
+        category: "Salad",
+        veg:"veg"
     },
     {
         _id: "2",
@@ -131,77 +132,88 @@ export const food_list = [
         image: food_2,
         price: 150,
         description: "Fruits, seeds, orange, apple, watermelon,pineapple, papaya, chia seed, flax seed and pumpkin seed. Introducing our delicious and nutritious fresh fruit salad specially designed to help you burn those extra calories",
-        category: "Salad"
+        category: "Salad",
+        veg:"veg"
     }, {
         _id: "3",
         name: "Fruit Salad",
         image: food_3,
         price: 180,
         description: "In fruit salad more than 5 type of seasonal fruit all fruit fresh cut. Fruits are a rich source of vitamins, minerals and fiber.",
-        category: "Salad"
+        category: "Salad",
+        veg:"veg"
     }, {
         _id: "4",
         name: "Grilled Chicken Salad",
         image: food_4,
         price: 219,
         description: "A nutritious and delicious salad made with grilled chicken, fresh greens and a variety of vegetables, tossed with a flavorful dressing.",
-        category: "Salad"
+        category: "Salad",
+        veg:"veg"
     }, {
         _id: "5",
         name: "Lasagna Rolls",
         image: food_5,
         price: 165,
         description: "Smoked to perfection, soft cottage cheese is paired with crunchy capsicum, corn & onion salad then drizzled with mayo & wrapped in a flaky lachha paratha.",
-        category: "Rolls"
+        category: "Rolls",
+        veg:"veg"
     }, {
         _id: "6",
         name: "Peri Peri Rolls",
         image: food_6,
         price: 219,
         description: "This classic wrap is a walk down the memory lane. Smoky marinated chicken tikka with cooked onion, generously drizzled with minty, tangy mayo wrapped in a soft roti.",
-        category: "Rolls"
+        category: "Rolls",
+        veg:"veg"
     }, {
         _id: "7",
         name: "Chicken Rolls",
         image: food_7,
         price: 195,
         description: "No more wait, straightaway order your favourite Masala Chicken Tikka Wrap & Chicken Bhuna Wrap, and switch that conquer-all mode ON right away.",
-        category: "Rolls"
+        category: "Rolls",
+        veg:"veg"
     }, {
         _id: "8",
         name: "Veg Rolls",
         image: food_8,
         price: 110,
         description: "Smoked to perfection, soft cottage cheese is paired with crunchy capsicum, corn & onion salad then drizzled with mayo & wrapped in a flaky lachha paratha. ",
-        category: "Rolls"
+        category: "Rolls",
+        veg:"veg"
     }, {
         _id: "9",
         name: "Ripple Ice Cream",
         image: food_9,
         price: 14,
         description: "Crispy fried Manchurian tossed in a garlic sauce with sliced vegetables, & mayo are doused in Cheese sauce & wrapped in a flaky paratha.",
-        category: "Deserts"
+        category: "Deserts",
+        veg:"veg"
     }, {
         _id: "10",
         name: "Fruit Ice Cream",
         image: food_10,
         price: 160,
         description: "An artisanal fruit ice cream made by slowly churning fresh milk cream and handpicked Mangoes. An ice cream for natural fruit lovers. Kcal/Serving: 133",
-        category: "Deserts"
+        category: "Deserts",
+        veg:"veg"
     }, {
         _id: "11",
         name: "Jar Ice Cream",
         image: food_11,
         price: 300,
         description: "Handpicked real Strawberry and fresh milk cream, slowly churned to give a gourmet icecream. Best for those who love natural berries in ice creams Kcal/Serving: 124",
-        category: "Deserts"
+        category: "Deserts",
+        veg:"veg"
     }, {
         _id: "12",
         name: "Vanilla Ice Cream",
         image: food_12,
         price: 195,
         description: "Handpicked sweet Chikoos churned slowly with milk cream to give fruit a creamy icecream.",
-        category: "Deserts"
+        category: "Deserts",
+        veg:"veg"
     },
     {
         _id: "13",  
@@ -209,7 +221,8 @@ export const food_list = [
         image: food_13,
         price: 219,
         description: "Sandwich with cheese and chicken filling",
-        category: "Sandwich"
+        category: "Sandwich",
+        nonveg:"nonveg"
     },
     {
         _id: "14",
@@ -217,56 +230,64 @@ export const food_list = [
         image: food_14,
         price: 120,
         description: "Triple layer sandwich with mixed vegetables. ",
-        category: "Sandwich"
+        category: "Sandwich",
+        veg:"veg"
     }, {
         _id: "15",
         name: "Grilled Sandwich",
         image: food_15,
         price: 100,
         description: "Mixed veggies with aloo tikki masala and cheese.",
-        category: "Sandwich"
+        category: "Sandwich",
+        veg:"veg"
     }, {
         _id: "16",
         name: "Bread Sandwich",
         image: food_16,
         price: 100,
         description: "Triple layer sandwich filled with mayonnaise and corn with cheese.",
-        category: "Sandwich"
+        category: "Sandwich",
+        veg:"veg"
     }, {
         _id: "17",
         name: "Cup Cake",
         image: food_17,
         price: 149,
         description: "(Eggless) The evergreen Pineapple Cake with real juicy pineapple chunks and delicious cream, makes this one a delicious fit for all your special occasions!",
-        category: "Cake"
+        category: "Cake",
+        veg:"veg"
     }, {
         _id: "18",
         name: "Vegan Cake",
         image: food_18,
         price: 125,
         description: "Soft vanilla sponge layered with the sweetness of butterscotch flavoured whipped cream is sure to bring your childhood memories back.",
-        category: "Cake"
+        category: "Cake",
+        veg:"veg"
     }, {
         _id: "19",
         name: "Butterscotch Cake",
         image: food_19,
         price: 120,
         description: "Our topseller mango cheesecake slice was just not enough which is why, here's a cake.",
-        category: "Cake"
+        category: "Cake",
+        veg:"veg"
     }, {
         _id: "20",
         name: "Sliced Cake",
         image: food_20,
         price: 179,
         description: "The combination of delicious cream cheese and fresh blueberries is what makes our Blueberry cheesecake stand apart.",
-        category: "Cake"
+        category: "Cake",
+        veg:"veg"
     }, {
         _id: "21",
         name: "Garlic Mushroom ",
         image: food_21,
         price: 200,
         description: "A versatile dish with mushroom cooked in a spiced gravy made from onion, tomato and a blend of indian spices like turmeric and cumin.",
-        category: "Pure Veg"
+        category: "Pure Veg",
+        
     }, {
         _id: "22",
         name: "Fried Cauliflower",

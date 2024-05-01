@@ -17,12 +17,12 @@ const Navbar = ({ setShowLogin }) => {
 
   return (
     <div className="navbar">
-      <Link to="/foodorder">
+      <Link to="/">
         <img src={assets.logo} alt="" className="logo" />
       </Link>
       <ul className="navbar-menu">
         <Link
-          to="/foodorder"
+          to="/"
           onClick={() => setMenu("home")}
           className={menu === "home" ? "active" : ""}
         >
@@ -43,7 +43,7 @@ const Navbar = ({ setShowLogin }) => {
           Mobile-app
         </a>
         <a
-          href="#footer"
+          href=""
           onClick={() => setMenu("contact-us")}
           className={menu === "contact-us" ? "active" : ""}
         >
