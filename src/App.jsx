@@ -9,6 +9,7 @@ import PlaceOrder from "./pages/PlaceOrder/PlaceOrder";
 import Footer from "./components/Footer/Footer";
 import LoginPopup from "./components/LoginPopup/LoginPopup";
 import Dishes from "./components/dishes_new/Dishes";
+import Contact from "./pages/contact/Contact";
 
 const App = () => {
 
@@ -25,6 +26,7 @@ const App = () => {
           <Route path="/search" element={<Search/>} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/order" element={<PlaceOrder />} />
+          <Route path="/contact" element={<Contact/>} />
         </Routes>
       </div>
       <Footer />
