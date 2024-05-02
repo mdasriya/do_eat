@@ -1,12 +1,20 @@
 import React, { useContext } from "react";
 import "./PlaceOrder.css";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 import { StoreContext } from "../../context/StoreContext";
 
 const PlaceOrder = () => {
   const { getTotalCartAmount } = useContext(StoreContext);
 
+  const handlePayment = () => toast("Order Placed Successfully");
+
+
   return (
-    <form className="place-order">
+    <>
+  
+    <div className="place-order">
       <div className="place-order-left">
         <p className="title">Delivery Information</p>
         <div className="multi-fields">
@@ -34,7 +42,7 @@ const PlaceOrder = () => {
               <p>₹{getTotalCartAmount()}</p>
             </div>
             <hr />
-            <div className="cart-total-details">
+            <div className="cart-total-det.ails">
               <p>Delivery Fee</p>
               <p>₹{getTotalCartAmount() === 0 ? 0 : 50}</p>
             </div>
@@ -46,11 +54,15 @@ const PlaceOrder = () => {
               </b>
             </div>
           </div>
-          <button>PROCEED TO PAYMENT</button>
+          <button onClick={handlePayment}>PROCEED TO PAYMENT</button>
         </div>
       </div>
-    </form>
+    </div>
+    <ToastContainer />
+    </>
+     
   );
 };
 
 export default PlaceOrder;
+ 
