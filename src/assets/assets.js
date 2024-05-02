@@ -287,6 +287,7 @@ export const food_list = [
         price: 200,
         description: "A versatile dish with mushroom cooked in a spiced gravy made from onion, tomato and a blend of indian spices like turmeric and cumin.",
         category: "Pure Veg",
+        veg:"veg"
         
     }, {
         _id: "22",
@@ -294,21 +295,24 @@ export const food_list = [
         image: food_22,
         price: 250,
         description: "Lightly batter coated and deep fried cauliflower florets tossed in mildly spicy and tangy sauce.",
-        category: "Pure Veg"
+        category: "Pure Veg",
+        veg:"veg"
     }, {
         _id: "23",
         name: "Mix Veg Pulao",
         image: food_23,
         price: 299,
         description: "A Tasty And Spicy Rice Preparation Cooked On A Tawa (Griddle) With A Blend Of Spices And Vegetables, Offering A Unique And Street Food-Inspired Dish.",
-        category: "Pure Veg"
+        category: "Pure Veg",
+        veg:"veg"
     }, {
         _id: "24",
         name: "Curd Rice",
         image: food_24,
         price: 325,
         description: "Its made by mixing cooked rice with fresh curd (yogurt) and seasoned with salt and other spices.",
-        category: "Pure Veg"
+        category: "Pure Veg",
+        veg:"veg"
     },
     {
         _id: "25",
@@ -316,7 +320,8 @@ export const food_list = [
         image: food_25,
         price: 239,
         description: "Classic all-time favourite pasta, cooked with Italian flavours & Arrabiata sauce. Perfect for sudden hunger blues.?",
-        category: "Pasta"
+        category: "Pasta",
+        veg:"veg"
     },
     {
         _id: "26",
@@ -324,48 +329,55 @@ export const food_list = [
         image: food_26,
         price: 375,
         description: "Penne pasta tossed in Italian sauce with green capsicum, zucchini, & topped with Parmesan cheese.",
-        category: "Pasta"
+        category: "Pasta",
+        veg:"veg"
     }, {
         _id: "27",
         name: "Creamy Pasta",
         image: food_27,
         price: 299,
         description: "Fusilli pasta tossed in a creamy white sauce with zucchini, mushrooms, black olives & topped with Parmesan cheese.. Comes with a side of 2 garlic breads.",
-        category: "Pasta"
+        category: "Pasta",
+        veg:"veg"
     }, {
         _id: "28",
         name: "Chicken Pasta",
         image: food_28,
         price: 325,
         description: "Red sauce & rich cream tossed with Zucchini, Bell Peppers, Baby Corn & Seasoned Broccoli",
-        category: "Pasta"
+        category: "Pasta",
+        veg:"veg"
     }, {
         _id: "29",
         name: "Buttter Noodles",
         image: food_29,
         price: 169,
         description: "Considered one of the most popular Indo-Chinese dishes, Veg Hakka Noodles ",
-        category: "Noodles"
+        category: "Noodles",
+        veg:"veg"
     }, {
         _id: "30",
         name: "Veg Noodles",
         image: food_30,
         price: 235,
         description: "A perfect medley of hakka noodles, julienne cut veggies and capsicum, seasoned with indo chinese condiments.",
-        category: "Noodles"
+        category: "Noodles",
+        veg:"veg"
     }, {
         _id: "31",
         name: "Schezwan Noodle",
         image: food_31,
         price: 235,
         description: "Yummy noodles combined with tender crisp veggies and sizzled with a dash of schezwan sauce.",
-        category: "Noodles"
+        category: "Noodles",
+        veg:"veg"
     }, {
         _id: "32",
         name: "Cooked Noodles",
         image: food_32,
         price: 325,
         description: "A savory combination of chicken, beans sprouts, and onions in a delicious American-Chinese dish.",
-        category: "Noodles"
+        category: "Noodles",
+        veg:"veg"
     }
 ]
