@@ -15,6 +15,10 @@ const Navbar = ({ setShowLogin }) => {
       behavior: "smooth",
     });
   }, []);
+  // window.scrollTo({
+  //   top: 0,
+  //   behavior: "smooth",
+  // });
 
   const { getTotalCartAmount } = useContext(StoreContext);
 

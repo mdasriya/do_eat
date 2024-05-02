@@ -3,6 +3,9 @@ import "./loading.css"
 
 const Loading = () => {
   return (
+    <div className="app-container">
+
+    <div className="main-container">
     <div className="hourglassBackground">
       <div className="hourglassContainer">
         <div className="hourglassCurves"></div>
@@ -13,6 +16,8 @@ const Loading = () => {
         <div className="hourglassCapBottom"></div>
         <div className="hourglassGlass"></div>
       </div>
+    </div>
+    </div>
     </div>
   )
 }
