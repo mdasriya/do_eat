@@ -7,6 +7,22 @@ import { StoreContext } from "../../context/StoreContext";
 const FoodItem = ({ id, name, price, description, image }) => {
   const { cartItems, addToCart, removeFromCart } = useContext(StoreContext);
 
+<<<<<<< HEAD
+=======
+  const handleAddToCart = (e) => {
+    e.preventDefault(); // Prevent default behavior
+    addToCart(id);
+    // alert("dish added in cart")
+    
+  };
+
+  const handleRemoveFromCart = (e) => {
+    e.preventDefault(); // Prevent default behavior
+    removeFromCart(id);
+    // alert("dish remove in cart")
+  };
+
+>>>>>>> 1b462f7952388a6868bbe72e28ac406b65071e4a
   return (
     <div className="food-item">
       <div className="food-item-img-container">

@@ -40,3 +40,12 @@
   .pagination button:hover {
     background-color: #000000;
   }
+
+  .explore_more{
+    color: orangered;
+    position: relative;
+    top: 40%;
+    left: 30%;
+    cursor: pointer;
+  }
+ 

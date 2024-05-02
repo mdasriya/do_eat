@@ -32,6 +32,7 @@ const Dishes = () => {
 
     useEffect(()=> {
       setDishes(food_list);
+      scrollToTop()
     },[]);
     console.log("dishes", dishes);
 
