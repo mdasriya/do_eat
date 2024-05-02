@@ -1,3 +1,4 @@
+
 import React, { useContext } from "react";
 import "./FoodItem.css";
 import { assets } from "../../assets/assets";
@@ -6,6 +7,8 @@ import { StoreContext } from "../../context/StoreContext";
 const FoodItem = ({ id, name, price, description, image }) => {
   const { cartItems, addToCart, removeFromCart } = useContext(StoreContext);
 
+<<<<<<< HEAD
+=======
   const handleAddToCart = (e) => {
     e.preventDefault(); // Prevent default behavior
     addToCart(id);
@@ -19,6 +22,7 @@ const FoodItem = ({ id, name, price, description, image }) => {
     // alert("dish remove in cart")
   };
 
+>>>>>>> 1b462f7952388a6868bbe72e28ac406b65071e4a
   return (
     <div className="food-item">
       <div className="food-item-img-container">
@@ -26,20 +30,20 @@ const FoodItem = ({ id, name, price, description, image }) => {
         {!cartItems[id] ? (
           <img
             className="add"
-            onClick={handleAddToCart}
+            onClick={() => addToCart(id)}
             src={assets.add_icon_white}
             alt=""
           />
         ) : (
           <div className="food-item-counter">
             <img
-              onClick={handleRemoveFromCart}
+              onClick={() => removeFromCart(id)}
               src={assets.remove_icon_red}
               alt=""
             />
             <p>{cartItems[id]}</p>
             <img
-              onClick={handleAddToCart}
+              onClick={() => addToCart(id)}
               src={assets.add_icon_green}
               alt=""
             />

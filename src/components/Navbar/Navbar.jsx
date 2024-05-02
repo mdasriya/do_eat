@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useState } from "react";
 import "./Navbar.css";
 import { assets } from "../../assets/assets";
 import { Link } from "react-router-dom";
@@ -8,14 +8,10 @@ const Navbar = ({ setShowLogin }) => {
   const [menu, setMenu] = useState("home");
 
   /* scroll to top function */
- 
-
-  useEffect(()=>{
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  },[])
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
 
   const { getTotalCartAmount } = useContext(StoreContext);
 
@@ -55,7 +51,7 @@ const Navbar = ({ setShowLogin }) => {
           Mobile-app
         </a>
         <a
-          href=""
+          href="/contact"
           onClick={() => setMenu("contact-us")}
           className={menu === "contact-us" ? "active" : ""}
         >
@@ -81,3 +77,14 @@ const Navbar = ({ setShowLogin }) => {
 };
 
 export default Navbar;
+
+
+
+
+
+
+
+
+
+
+
