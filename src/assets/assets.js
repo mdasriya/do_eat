@@ -222,7 +222,7 @@ export const food_list = [
         price: 219,
         description: "Sandwich with cheese and chicken filling",
         category: "Sandwich",
-        nonveg:"nonveg"
+        veg:"nonveg"
     },
     {
         _id: "14",
