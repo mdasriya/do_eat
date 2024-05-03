@@ -10,6 +10,7 @@ import Contact from "./pages/contact/Contact";
 import Footer from "./components/Footer/Footer";
 import LoginPopup from "./components/LoginPopup/LoginPopup";
 import Dishes from "./components/dishes_new/Dishes";
+import SignupPopup from "./components/SignupPopup/SignupPopup";
 
 const App = () => {
 
@@ -28,6 +29,7 @@ const App = () => {
           <Route path="/cart" element={<Cart />} />
           <Route path="/order" element={<PlaceOrder />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/signuppopup" element={<SignupPopup />} />
         </Routes>
       </div>
       <Footer />

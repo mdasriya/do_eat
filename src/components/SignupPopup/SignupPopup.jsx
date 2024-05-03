@@ -1,18 +1,19 @@
 import React, { useState } from 'react';
-import './LoginPopup.css';
+import './SignupPopup.css';
 import { assets } from '../../assets/assets';
 import { useNavigate } from 'react-router-dom';
 
-const LoginPopup = ({ setShowLogin }) => {
-    const navigate = useNavigate();
 
-    // Combined state for email and password
+const SignupPopup = ({ setShowLogin }) => {
     const [formData, setFormData] = useState({
+        name: '',
         email: '',
         password: ''
     });
 
-    const { email, password } = formData;
+    const navigate = useNavigate();
+
+    const { name, email, password } = formData;
 
     const handleInputChange = (event) => {
         setFormData({
@@ -23,35 +24,36 @@ const LoginPopup = ({ setShowLogin }) => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        // Here you can perform your login/signup logic using the formData state
-        // For now, let's just log the formData
+        // Here you can perform your signup logic using the formData state
         console.log(formData);
     };
 
     const navigatePage = () => {
-        navigate('/signuppopup');
+        navigate('/loginpopup');
     };
 
     return (
         <div className='login-popup'>
             <form onSubmit={handleSubmit} className="login-popup-container">
                 <div className="login-popup-title">
-                    <h2>Login</h2>
+                    <h2>Signup</h2>
                     <img onClick={() => setShowLogin(false)} src={assets.cross_icon} alt="" />
                 </div>
                 <div className="login-popup-inputs">
+                    <input type="text" name="name" placeholder='Your name' value={name} onChange={handleInputChange} required />
                     <input type="email" name="email" placeholder='Your email' value={email} onChange={handleInputChange} required />
                     <input type="password" name="password" placeholder='Password' value={password} onChange={handleInputChange} required />
                 </div>
-                <button type="submit">Login</button>
+                <button type="submit">Create account</button>
                 <div className="login-popup-condition">
                     <input type="checkbox" required />
                     <p>By continuing, I agree to the terms of use & privacy policy.</p>
                 </div>
-                <p>Create a new account? <span onClick={navigatePage}>Click here</span></p>
+                <p>Already have an account? <span onClick={navigatePage}>Login here</span></p>
+                
             </form>
         </div>
     );
 };
 
-export default LoginPopup;
+export default SignupPopup;
