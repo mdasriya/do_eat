@@ -16,13 +16,34 @@ function classNames(...classes) {
 }
 
 export default function Dishes() {
+  const [selectedCategory, setSelectedCategory] = useState('');
+  const [selectedSortOption, setSelectedSortOption] = useState('');
+  const { food_list } = useContext(StoreContext);
+  const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
+  const [currentPage, setCurrentPage] = useState(1);
+  const [dishes, setDishes] = useState(food_list);
+  const [productsPerPage] = useState(10);
+
+  // Filter by category
+  // const filteredProducts = selectedCategory
+  //   ? food_list.filter((item) => item.category === selectedCategory)
+  //   : [...food_list];
+
+
+const handleSort = (props) => {
+ // Sort filtered products
+ console.log("props", props)
+const sortProduct = dishes.filter((item)=> item.veg == props)
+  console.log("sort",sortProduct)
+  setDishes(sortProduct)
+}
 
   const sortOptions = [
     // { name: 'Most Popular', href: '#', current: true },
     // { name: 'Best Rating', href: '#', current: false },
     // { name: 'Newest', href: '#', current: false },
-    { name: 'Price: Low to High', current: false },
-    { name: 'Price: High to Low', current: false },
+    { name: 'veg', current: false },
+    { name: 'nonveg', current: false },
   ]
   
   const filters = [
@@ -43,16 +64,12 @@ export default function Dishes() {
   ]
 
 
-  const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
-  const [currentPage, setCurrentPage] = useState(1);
-  const [dishes, setDishes] = useState([]);
-  const [productsPerPage] = useState(10);
-  const { food_list } = useContext(StoreContext);
+
 
 // Logic for displaying products
   const indexOfLastProduct = currentPage * productsPerPage;
    const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
-   const currentProducts = food_list.slice(indexOfFirstProduct, indexOfLastProduct);
+   const currentProducts = dishes.slice(indexOfFirstProduct, indexOfLastProduct);
 
   // Function to scroll to the top of the page
   const scrollToTop = () => {
@@ -64,10 +81,12 @@ export default function Dishes() {
 
 
   useEffect(() => {
-    setDishes(food_list);
+    // setDishes(food_list);
     scrollToTop();
-  }, [food_list]);
+  }, [food_list,handleSort,dishes ]);
 
+console.log("cat",selectedCategory)
+console.log("sort",selectedSortOption)
 
 
   return (
@@ -140,7 +159,8 @@ export default function Dishes() {
                                       name={`${section.id}[]`}
                                       defaultValue={option.value}
                                       type="checkbox"
-                                      defaultChecked={option.checked}
+                                      checked={selectedCategory === option.value}
+                                      onChange={() => setSelectedCategory(option.value)}
                                       className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
                                     />
                                     <label
@@ -202,6 +222,7 @@ export default function Dishes() {
                                 active ? 'bg-gray-100' : '',
                                 'block px-4 py-2 text-sm'
                               )}
+                              onClick={()=> handleSort(option.name)}
                             >
                               {option.name}
                             </a>
@@ -271,7 +292,7 @@ export default function Dishes() {
                                 />
                                 <label
                                   htmlFor={`filter-${section.id}-${optionIdx}`}
-                                  className="ml-3 text-sm text-gray-600"
+                                  className="ml-3 text-xl text-gray-600"
                                 >
                                   {option.label}
                                 </label>
@@ -289,7 +310,7 @@ export default function Dishes() {
               <div className="lg:col-span-3">
                 {/* Your content */}
                 <div className="food-display-list">
-            {currentProducts.map((item, index) => (
+            {dishes.map((item, index) => (
               <FoodItem key={index} id={item._id} name={item.name} description={item.description} price={item.price} image={item.image} />
             ))}
           </div>

@@ -9,6 +9,10 @@ const FoodDisplay = ({ category }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const [productsPerPage] = useState(5);
 const navigate = useNavigate()
+
+
+
+
   // Logic for displaying products
   const indexOfLastProduct = currentPage * productsPerPage;
   const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
